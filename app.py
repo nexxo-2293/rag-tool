@@ -18,13 +18,9 @@ from llama_index.core.node_parser import SentenceSplitter
 
 # ================== ENV & CONSTANTS ==================
 
-load_dotenv()
+OLLAMA_API_KEY = st.secrets["OLLAMA_API_KEY"]
+OLLAMA_MODEL = st.secrets["OLLAMA_MODEL"]
 
-OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY")
-if not OLLAMA_API_KEY:
-    raise ValueError("❌ Missing OLLAMA_API_KEY in .env")
-
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "deepseek-v3.1:671b-cloud")
 
 # Ollama Cloud client (no local server needed)
 ollama_client = Client(
