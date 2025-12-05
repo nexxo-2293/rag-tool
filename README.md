@@ -100,25 +100,6 @@ Decoupled retrieval + synthesis pipeline
 
 
 
-            ┌──────────────┐
-            │   PDF Upload │
-            └───────┬──────┘
-                    │
-          Auto PDF Parsing (PyMuPDF)
-                    │
-     ┌──────── Chunking (512 / 100 overlap) ───────┐
-     │                                              │
-   Embeddings (BGE-small)                     Session Storage
-     │                                              │
- Chroma Vector Index                        SQLite (per-PDF)
-     │                                              │
-     └──────── Retrieval (Top-K Relevant Chunks) ───┘
-                    │
-          DeepSeek Cloud (via Ollama API)
-                    │
-            Final Answer + Evidence
-
-
 🔑 Environment Variables
 
 Inside Streamlit Secrets:
