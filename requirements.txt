@@ -1,0 +1,11 @@
+streamlit
+chromadb
+pymupdf
+python-dotenv
+ollama
+
+llama-index-core
+llama-index-readers-file
+llama-index-vector-stores-chroma
+llama-index-embeddings-huggingface
+sentence-transformers
